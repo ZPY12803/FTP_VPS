@@ -6,4 +6,3 @@ Como Servidor Privado Virtual (VPS) se utilizará el servidor remoto instalado e
 2022-02-17 Arreglar archivos angular en local para subirlos al vps
 2022-02-19 Generación de la documentación
 2022-02-22 Entrega de la tarea
-g
