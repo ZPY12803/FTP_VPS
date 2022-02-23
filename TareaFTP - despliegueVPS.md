@@ -342,3 +342,16 @@ chmod -R 755 /var/www/html
 ![image-20220219170805487](TareaFTP%20-%20despliegueVPS.assets/image-20220219170805487.png)
 
 y ya funcionaría todo con https con nuestros certificados. El navegador no estará muy feliz con que sean  autogenerados por nosotros pero funciona todo.
+
+
+
+### Anexo - Problemas en VSC con el comando ng
+
+A la hora de compilar en angular la parte de front en el ordenador de clase, la terminal no reconocía el comando ng. Tras varios intentos reinstalando npm, angular, y cambiando en las variables de entorno el PATH de angular, nodejs y npm, luego tampoco dejaba ejecutar scripts.
+
+![anexo01](TareaFTP%20-%20despliegueVPS.assets/anexo01.png)
+
+![image-20220222200955726](TareaFTP%20-%20despliegueVPS.assets/image-20220222200955726.png)
+
+La solución que encontré fue crear una maquina virtual linux limpia, instalando node (para el comando npm), descargando los archivos front de github, instalando las dependencias con `npm install` y ejecutando `ng build --prod`. 
+
