@@ -3,7 +3,7 @@ Desplegar una aplicación web Full Stack en un VPS, siguiendo las indicaciones d
 Como Servidor Privado Virtual (VPS) se utilizará el servidor remoto instalado en la nube privada del aula.
 
 2022-02-15 Inicio de tarea
-2022-02-17 Arreglar archivos angular en local para subirlos al vps
+2022-02-17 Arreglados archivos angular en local para subirlos al vps
 2022-02-19 Generación de la documentación
-2022-02-22 Entrega de la tarea
-g
+2022-02-22 Anexo
+2022-02-24 Grabación del video y finalización de la documentación
