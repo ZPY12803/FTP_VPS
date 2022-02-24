@@ -15,6 +15,14 @@ Autor: Carolina Medina Llorente
 https://github.com/ZPY12803/FTP_VPS
 ```
 
+### Url del video
+
+```bash
+https://www.loom.com/share/d8a6c43be0d14c1cbd69fc5f4792670c
+```
+
+
+
 ### Objetivo
 
 Desplegar una aplicación web Full Stack en un VPS, siguiendo las indicaciones de la playlist facilitada en el aula virtual. (https://www.youtube.com/watch?v=ibIn4qIniv8&list=PL4bT56Uw3S4zIHpaNjz4OVAmXGkYgLpjo)
@@ -23,19 +31,7 @@ Como Servidor Privado Virtual (VPS) se utilizará el servidor remoto instalado e
 
 ### Software utilizado
 
-Putty - para la conexión en remoto
-
-Filezilla - para la subida de archivos por fts
-
-mysql - para la base de datos
-
-vsftp - para la conexion por ftp
-
-apache2  - como servidor web
-
-Virtual Studio Code - para modificar los archivos de front
-
-
+Putty, Filezilla, Linux Ubuntu, MySQL, Vsftp, Apache y Virtual Studio Code.
 
 ### Proceso del despliegue
 
@@ -347,11 +343,22 @@ y ya funcionaría todo con https con nuestros certificados. El navegador no esta
 
 ### Anexo - Problemas en VSC con el comando ng
 
-A la hora de compilar en angular la parte de front en el ordenador de clase, la terminal no reconocía el comando ng. Tras varios intentos reinstalando npm, angular, y cambiando en las variables de entorno el PATH de angular, nodejs y npm, luego tampoco dejaba ejecutar scripts.
+A la hora de compilar en angular la parte de front en el ordenador de clase (en windows), la terminal no reconocía el comando ng. Tras varios intentos reinstalando npm, angular, y cambiando en las variables de entorno el PATH de angular, nodejs y npm, luego tampoco dejaba ejecutar scripts.
 
 ![anexo01](TareaFTP%20-%20despliegueVPS.assets/anexo01.png)
 
 ![image-20220222200955726](TareaFTP%20-%20despliegueVPS.assets/image-20220222200955726.png)
 
-La solución que encontré fue crear una maquina virtual linux limpia, instalando node (para el comando npm), descargando los archivos front de github, instalando las dependencias con `npm install` y ejecutando `ng build --prod`. 
+La solución que encontré fue crear una maquina virtual linux limpia, instalando node (para el comando npm), descargando los archivos front de github, instalando las dependencias con `npm install` para finalmente poder ejecutar  `ng build`. 
+
+```bash
+apt-get install nodejs
+apt-get install npm
+mkdir /var/web
+cd /var/web
+git clone https://github.com/cavanosa/virtualFRONT.git
+cd virtualFRONT
+npm install
+ng build --prod
+```
 
